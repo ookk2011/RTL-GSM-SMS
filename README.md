@@ -1,9 +1,11 @@
 # gsmsms_sdr
-使用sdr嗅探gsm短信
+使用sdr嗅探gsm短信，GSM在中国是没有加密的。
 
 ![sniff_1](./sniff_1.png)
 
 ![sniff_2](./sniff_2.png)
+
+![sniff_3](./sinff_3.png)
 
 # 硬件
 - USB DVB-T key（RTL2832U）
