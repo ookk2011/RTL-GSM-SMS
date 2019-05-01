@@ -16,6 +16,7 @@ g_listen_udp_dst_port = 4729;
 g_forward_udp_port = 47290;
 g_q = Queue.Queue();
 g_set = set();
+g_s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM);
 
 def recv_new_data(p):
 	#pdb.set_trace();
@@ -34,9 +35,7 @@ def recv_new_data(p):
 		g_set.clear();
 		g_set.add(udpdata);
 		#print udpdata.encode('hex')
-		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		s.sendto(udpdata, ("127.0.0.1", g_forward_udp_port))
-		s.close()
+		g_s.sendto(udpdata, ("127.0.0.1", g_forward_udp_port));
 
 if __name__ == '__main__':
 	try:
