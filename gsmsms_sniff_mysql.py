@@ -226,7 +226,7 @@ if __name__ == '__main__':
 		t.daemon = True
 		t.start()
 		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		s.bind(('0.0.0.0', 47290+10))
+		s.bind(('0.0.0.0', 47290))
 		while True:
 			data, addr = s.recvfrom(2048)
 			#print data.encode('hex')
