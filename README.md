@@ -3,9 +3,6 @@
 
 ![sniff_1](./sniff_1.png)
 
-![sniff_2](./sniff_2.png)
-
-![sniff_3](./sinff_3.png)
 
 # 硬件
 - USB DVB-T key（RTL2832U）
@@ -81,7 +78,14 @@ GSM-900:
 
 grgsm_livemon -f 937.4M
 在Gr-gsm livemon能采集到数据的情况下。
+
+![sniff_2](./sniff_2.png)
+
+![sniff_3](./sinff_3.png)
+
 打开一个终端启动python sms_forward.py,然后在开一个终端运行python gsmsms_sniff.py。
+
+![sniff_1](./sniff_1.png)
 
 ## 关于上行与下行
 - 上行：手机发给基站
