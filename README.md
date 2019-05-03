@@ -59,9 +59,35 @@ sudo make install
 
 
 ## 使用方法
-```
+
 kal -s GSM900
+```
+Found 1 device(s):
+  0:  Generic RTL2832U OEM
+
+Using device 0: Generic RTL2832U OEM
+Found Rafael Micro R820T tuner
+Exact sample rate is: 270833.002142 Hz
+[R82XX] PLL not locked!
+kal: Scanning for GSM-900 base stations.
+GSM-900:
+	chan: 14 (937.8MHz + 36.967kHz)	power: 33228.76
+	chan: 17 (938.4MHz + 37.421kHz)	power: 31349.29
+	chan: 19 (938.8MHz + 37.551kHz)	power: 50485.25
+	chan: 24 (939.8MHz + 37.361kHz)	power: 50187.10
+	chan: 30 (941.0MHz + 36.515kHz)	power: 145977.48
+	chan: 34 (941.8MHz + 36.540kHz)	power: 37868.97
+```
+
 grgsm_livemon -f 937.4M
 在Gr-gsm livemon能采集到数据的情况下。
 打开一个终端启动python sms_forward.py,然后在开一个终端运行python gsmsms_sniff.py。
+
+## 关于上行与下行
+- 上行：手机发给基站
+- 下载：基站转发给手机
 ```
+PS:据说850--900是上行信息，900-999是下行信息，
+可以使用kal -s GSM850查找上行，kal -s GSM900查找下行
+```
+
