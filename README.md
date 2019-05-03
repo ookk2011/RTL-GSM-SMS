@@ -1,4 +1,6 @@
 # gsmsms_sdr
+根据 https://github.com/le4f/gsmsniff 修改而来的
+
 使用sdr嗅探gsm短信，GSM在中国是没有加密的。
 
 ![sniff_1](./sniff_1.png)
