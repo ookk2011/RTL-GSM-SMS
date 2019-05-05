@@ -95,5 +95,12 @@ grgsm_livemon -f 937.4M
 ```
 PS:据说850--900是上行信息，900-999是下行信息，
 可以使用kal -s GSM850查找上行，kal -s GSM900查找下行
+grgsm_livemon_headless:这个是命令行的。
+```
+
+## 多个设备
+```
+1、用gqrx查找到Device string
+2、grgsm_livemon_handless --args=rtl=0
 ```
 
