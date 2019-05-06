@@ -20,8 +20,8 @@ g_s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM);
 
 def recv_new_data(p):
 	#pdb.set_trace();
-	if g_listen_udp_dst_port != int(p[UDP].dport):
-	   return
+	#if g_listen_udp_dst_port != int(p[UDP].dport):
+	#   return
 
 	udpdata = str(p[UDP].payload)
 	
@@ -40,7 +40,8 @@ def recv_new_data(p):
 if __name__ == '__main__':
 	try:
 		#while True:
-		str_filter = 'udp and port %d' % g_listen_udp_dst_port;
+		#str_filter = 'udp and port %d' % g_listen_udp_dst_port;
+		str_filter = 'udp'
 		sniff(iface='lo', filter=str_filter, prn=recv_new_data,count = 0 ,store=0 )
 
 	except KeyboardInterrupt:
