@@ -102,5 +102,7 @@ grgsm_livemon_headless:这个是命令行的。
 ```
 1、用gqrx查找到Device string
 2、grgsm_livemon_handless --args=rtl=0
+3、grgsm_livemon -f 939.534M --args=rtl=1 --serverport=4730 --collectorport=4730 --collector=127.0.0.1
+上面的2个port必须一样，要不然收不到数据
 ```
 
