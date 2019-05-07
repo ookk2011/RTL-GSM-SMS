@@ -105,5 +105,8 @@ grgsm_livemon_headless:这个是命令行的。
 3、grgsm_livemon -f 939.534M --args=rtl=1 --serverport=4730 --collectorport=4730 --collector=127.0.0.1
    --args,代表选择使用哪个设备
    --serverport 和 --collectorport 必须一致，要不然收不到数据
+   -- 端口在4729-6000内都可以使用
 ```
+## 贴一张我同时跑3个设备的图片
 
+![sniff_4](./sinff_4.png)
