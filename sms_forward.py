@@ -12,7 +12,6 @@ import os
 from scapy.all import sniff, UDP
 import pdb
 
-g_listen_udp_dst_port = 4729;
 g_forward_udp_port = 47290;
 g_q = Queue.Queue();
 g_set = set();
@@ -22,7 +21,7 @@ def recv_new_data(p):
 	#pdb.set_trace();
 	#if g_listen_udp_dst_port != int(p[UDP].dport):
 	#   return
-
+	
 	udpdata = str(p[UDP].payload)
 	
 	_b_find = 0;
@@ -41,7 +40,7 @@ if __name__ == '__main__':
 	try:
 		#while True:
 		#str_filter = 'udp and port %d' % g_listen_udp_dst_port;
-		str_filter = 'udp'
+		str_filter = 'udp portrange 4729-6000';
 		sniff(iface='lo', filter=str_filter, prn=recv_new_data,count = 0 ,store=0 )
 
 	except KeyboardInterrupt:
