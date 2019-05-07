@@ -35,7 +35,7 @@ make
 sudo make install
 sudo ldconfig 
 ```
-
+# 选择一个设备，看你用的是什么设备(hackrf还是rtl-sdr)
 ## kalibrate-hackrf
 ```
 git clone https://github.com/scateu/kalibrate-hackrf.git
@@ -103,7 +103,7 @@ grgsm_livemon_headless:这个是命令行的。
 1、用gqrx查找到Device string
 2、grgsm_livemon_handless --args=rtl=0
 3、grgsm_livemon -f 939.534M --args=rtl=1 --serverport=4730 --collectorport=4730 --collector=127.0.0.1
-   其中--args,代表选择使用哪个设备
-   --serverport 和 --collectorport 必须一致，要不让收不到数据
+   --args,代表选择使用哪个设备
+   --serverport 和 --collectorport 必须一致，要不然收不到数据
 ```
 
