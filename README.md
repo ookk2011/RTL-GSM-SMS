@@ -35,6 +35,10 @@ make
 sudo make install
 sudo ldconfig 
 ```
+
+## docker
+https://github.com/marcelmaatkamp/docker-gnuradio-gr-gsm-ptrkrysik
+
 # 选择一个设备，看你用的是什么设备(hackrf还是rtl-sdr)
 ## kalibrate-hackrf
 ```
