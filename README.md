@@ -20,9 +20,19 @@
 - sms.sql
 
 ## 安装依赖
-- apt-get install git cmake libboost-all-dev libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy python-scapy
-- apt-get install python-mysqldb
-- apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr-dev osmo-sdr libosmosdr-dev libosmocore libosmocore-dev cmake libboost-all-dev libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy python-scapy
+- apt-get install gnuradio gnuradio-dev rtl-sdr librtlsdr-dev osmo-sdr libosmosdr-dev libosmocore libosmocore-dev cmake libboost-all-dev libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy python-scapy python-mysqldb
+- scapy (版本必须是2.2.0)
+- tcpdump
+
+## 树莓派优化安装
+
+```
+安装gnuradio and gr-gsm: 
+cmake -DCMAKE_C_FLAGS="-mcpu=cortex-a53 -funsafe-math-optimizations -O2" -DCMAKE_CXX_FLAGS="-mcpu=cortex-a53 -funsafe-math-optimizations -O2" ../
+
+安装libosmocore
+./configure CFLAGS="-mcpu=cortex-a53 -funsafe-math-optimizations -O2" CPPFLAGS="-mcpu=cortex-a53 -funsafe-math-optimizations -O2" 
+```
 
 ## gr-gsm
 ```
