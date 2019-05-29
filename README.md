@@ -124,3 +124,4 @@ grgsm_livemon_headless:这个是命令行的。
 ## 贴一张我同时跑3个设备的图片
 
 ![sniff_4](./sniff_4.png)
+![hardware](./aaa.jpeg)
